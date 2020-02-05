@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    //菜单响应事件
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -52,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if(id==R.id.add_item){
+            Toast.makeText(this,"you clicked add",Toast.LENGTH_SHORT).show();
+        }
+        else if(id==R.id.remove_item){
+            Toast.makeText(this,"you clicked remove",Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
